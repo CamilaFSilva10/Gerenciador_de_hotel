@@ -3,16 +3,23 @@
 #include <locale.h>
 
 void Restaurante();
-void vagaR();
 void Estacionamento();
 void Hotel();
 void MenuInicial();
 
-
-typedef struct{
+struct no
+{
+    struct no *ant;
     char nome[30];
     int quantidade;
     int hora;
+    int quarto;
+    struct no *prox;
+};
+
+typedef struct{
+    struct no *inicio;
+    struct no *fim;
 }cadastro;
 
 char restaurante[20], hotel[20], estacionamento[20];
@@ -36,16 +43,16 @@ void MenuInicial(){
     int tipo;
 
     printf("Bem vindo ao Gerenciador\n\n");
-    printf("Instruções: \n -Para utilizar o gerenciador, por favor, escolha qual o tipo de estabelecimento.\n -Em seguida coloque as informações do local escolhido.\n -O gerenciador está apto para: || 1 - Restaurantes || 2 - Estacionamentos || 3 - Hotéis. ||  \n\n");
+    printf("Instruï¿½ï¿½es: \n -Para utilizar o gerenciador, por favor, escolha qual o tipo de estabelecimento.\n -Em seguida coloque as informaï¿½ï¿½es do local escolhido.\n -O gerenciador estï¿½ apto para: || 1 - Restaurantes || 2 - Estacionamentos || 3 - Hotï¿½is. ||  \n\n");
 
-    printf("Digite o tipo de estabelecimento por meio do número representado acima: ");
+    printf("Digite o tipo de estabelecimento por meio do nï¿½mero representado acima: ");
     scanf("%d", &tipo);
 
     switch (tipo){
         case 1:
             printf("Qual o nome do seu restaurante? ");
             scanf("%s", &restaurante);
-            printf("Quantos lugares disponíveis há em seu estabelecimento? ");
+            printf("Quantos lugares disponï¿½veis hï¿½ em seu estabelecimento? ");
             scanf("%d", &lugares);
             printf("Uma mesa em seu estabelecimento comporta quantas pessoas? ");
             scanf("%d", &mesa);
@@ -62,7 +69,7 @@ void MenuInicial(){
             Hotel();
             break;
         default:
-            printf("Opção não encontrada. Deseja voltar? ");
+            printf("Opï¿½ï¿½o nï¿½o encontrada. Deseja voltar? ");
             MenuInicial();
             break;
     }
@@ -76,15 +83,15 @@ void Restaurante()
     system("cls");
     printf("Bem vindo ao %s\n\n", restaurante);
 
-    printf("O que você deseja fazer?\n");
-    printf(" 0 - Reservar vaga; \n 1 - Cancelar vaga; \n 2 - Ver vagas disponíveis; \n");
+    printf("O que vocï¿½ deseja fazer?\n");
+    printf(" 0 - Reservar vaga; \n 1 - Cancelar vaga; \n 2 - Ver vagas disponï¿½veis; \n");
     scanf("%d", &vaga);
 
     if (vaga == 1){
         printf("ok");
     }
     if(vaga == 2){
-        printf("Ainda restam %d lugares disponíveis no restaurante\n\n", lugares);
+        printf("Ainda restam %d lugares disponï¿½veis no restaurante\n\n", lugares);
         system("pause");
         Restaurante();
     }
@@ -101,19 +108,19 @@ void Restaurante()
             aux = 1;
             lugares--;
         }
-        printf("Horário de entrada: ");
+        printf("Horï¿½rio de entrada: ");
         scanf("%d", &reserva.hora);
 
         printf("\n\nReserva realizada:\n");
         printf("Nome do cliente: %s\n", reserva.nome);
         printf("Mesa para %d pessoas\n", reserva.quantidade);
-        printf("Entrada ás %d horas\n", reserva.hora);
+        printf("Entrada ï¿½s %d horas\n", reserva.hora);
         printf("Quantidades de mesas para reserva: %d", aux);
 
-        fprintf(file, "\n\nReserva realizada: Cliente: %s | Necessário %d mesa(s) para %d pessoas | Entrada ás %d horas\n", reserva.nome, aux, reserva.quantidade, reserva.hora);
+        fprintf(file, "\n\nReserva realizada: Cliente: %s | Necessï¿½rio %d mesa(s) para %d pessoas | Entrada ï¿½s %d horas\n", reserva.nome, aux, reserva.quantidade, reserva.hora);
         fclose(file);
 
-        printf("\n\nPara voltar ao menu inicial do restaurante, pressione a tecla 9\nPara ver o relatório pressione a tecla 8\n");
+        printf("\n\nPara voltar ao menu inicial do restaurante, pressione a tecla 9\nPara ver o relatï¿½rio pressione a tecla 8\n");
         scanf("%d", &escolha);
 
         if(escolha == 9){
@@ -132,4 +139,8 @@ void Hotel()
 {
     system("cls");
     printf("Bem vindo ao %s\n\n", hotel);
+
+    printf("O que vocÃª deseja fazer?\n");
+    printf(" 1 - Reservar quarto; \n 2 - Cancelar quarto; \n 3 - Ver quartos disponÃ­veis; \n");
+    scanf("%d", &quarto);
 }
