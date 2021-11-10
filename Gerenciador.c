@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 
-void Restaurante();
-void Estacionamento();
-void Hotel();
-void MenuInicial();
-
 struct no
 {
     struct no *ant;
@@ -17,10 +12,17 @@ struct no
     struct no *prox;
 };
 
-typedef struct{
+typedef struct
+{
     struct no *inicio;
     struct no *fim;
-}cadastro;
+} cadastro;
+
+void Restaurante();
+void Estacionamento();
+void Hotel();
+void MenuInicial();
+void cria(cadastro *q);
 
 char restaurante[20], hotel[20], estacionamento[20];
 int lugares = 0, mesa = 0, aux = 0;
@@ -36,6 +38,12 @@ int main()
 
     MenuInicial();
 
+}
+
+void cria(cadastro *q)
+{
+    q->inicio = NULL;
+    q->fim = NULL;
 }
 
 void MenuInicial(){
@@ -142,5 +150,5 @@ void Hotel()
 
     printf("O que você deseja fazer?\n");
     printf(" 1 - Reservar quarto; \n 2 - Cancelar quarto; \n 3 - Ver quartos disponíveis; \n");
-    scanf("%d", &quarto);
+    scanf("%d", );
 }
