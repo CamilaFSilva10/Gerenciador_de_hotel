@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1637362423 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<windows.h>
+	"Menu.h"
+	"restaurante.h"
+
+1637362345 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\menu.h
+
+1637362431 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\menu.c
+	"Menu.h"
+
+1637362297 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\restaurante.h
+
+1637362329 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\restaurante.c
+	"restaurante.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1637362206 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\hotel.c
+	"hotel.h"
+
+1637361563 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\hotel.h
+
