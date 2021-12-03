@@ -19,11 +19,14 @@ typedef struct
 
 void cria(listacircularde *q);
 int  insere(listacircularde *q, char n[30], int h, int quant);
-void mostra(listacircularde q, int sentido);
+void mostra(listacircularde *q, int sentido);
 int  estaVazia(listacircularde q);
-int  retira(listacircularde *q, char d[15]);
-void Restaurante(char nomeR[30], int lugar, int mesas);
+int  retira(listacircularde *q, int n);
+void Restaurante(char nomeR[30], int lugar, int mesas, int estac);
+void iniciar(char nomeR[30], int lugar, int mesas, int estac);
+void vagasEstac(char letras_placa[5], int num_placa, int clock, int quantas_vagas);
 
 struct no reserva;
-
+char nomeR[30];
+int lugar, mesas, estac;
 #endif // RESTAURANTE_H_INCLUDED

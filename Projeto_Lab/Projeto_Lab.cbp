@@ -31,12 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="EstacionamentoSL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="EstacionamentoSL.h" />
+		<Unit filename="Hotel.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Menu.h" />
 		<Unit filename="Restaurante.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hotel.h">
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
