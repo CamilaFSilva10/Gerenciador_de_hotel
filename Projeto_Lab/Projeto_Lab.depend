@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1638932218 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<windows.h>
+	"Menu.h"
+
+1638929908 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\menu.h
+
+1638930038 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"Menu.h"
+
+1638930032 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\restaurante.h
+
+1638976583 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\restaurante.c
+	"restaurante.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1638890233 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\hotel.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hotel.h"
+
+1638890064 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\hotel.h
+
+1638929496 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\estacionamentosl.c
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<math.h>
+	"EstacionamentoSL.h"
+	"restaurante.h"
+
+1638929495 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\estacionamentosl.h
+
+1638976016 source:c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\estacionamento1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<math.h>
+	"estacionamento1.h"
+
+1638922690 c:\users\camil\onedrive\documentos\segundosemestre\projeto_lab\estacionamento1.h
+
